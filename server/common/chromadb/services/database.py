@@ -3,9 +3,9 @@ import pickle
 import chromadb
 from typing import List
 
-from server.common.chromadb.config import chromadb_settings
-from server.common.openai.services.embedding import text_to_embedding
-from server.common.logging.config import setup_logging
+from common.chromadb.config import chromadb_settings
+from common.openai.services.embedding import text_to_embedding
+from common.logging.config import setup_logging
 
 logger = setup_logging(__name__)
 

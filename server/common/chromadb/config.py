@@ -3,7 +3,7 @@ from typing import Dict, Any
 from dotenv import load_dotenv
 load_dotenv()
 
-from server.library.googlesheets import get_google_sheets_data
+from library.googlesheets import get_google_sheets_data
 
 class ProductSettings :
     """

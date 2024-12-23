@@ -2,8 +2,8 @@ import anthropic
 import requests
 from typing import List, Dict, Any
 
-from server.common.anthropic.config import anthropic_settings
-from server.common.logging.config import setup_logging
+from common.anthropic.config import anthropic_settings
+from common.logging.config import setup_logging
 
 logger = setup_logging(__name__)
 
@@ -36,6 +36,8 @@ class LLM:
         messages : 전체 채팅 메세지
         """
         try :
+            messages = check_max_tokens(messages, anthropic_settings.ANTHROPIC_LLM_MAX_TOKENS)
+
             response = self.client.messages.create(
                 model=anthropic_settings.ANTHROPIC_LLM_MODEL,
                 max_tokens=anthropic_settings.ANTHROPIC_LLM_MAX_TOKENS,

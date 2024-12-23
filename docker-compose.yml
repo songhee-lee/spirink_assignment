@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  streamlit_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./client:/app # 로컬 client 폴더를 컨테이너의 /app에 마운트
+
+  fastapi_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./server:/app # 로컬 server 폴더를 컨테이너의 /app에 마운트

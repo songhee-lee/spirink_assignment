@@ -1,10 +1,10 @@
 import os
 from typing import List, Dict, Any
 
-from server.modules.chat.config import chat_settings
-from server.common.chromadb.services.database import chroma_db
-from server.common.openai.services.gpt import openai_llm
-from server.common.anthropic.services.claude import anthropic_llm
+from modules.chat.config import chat_settings
+from common.chromadb.services.database import chroma_db
+from common.openai.services.gpt import openai_llm
+from common.anthropic.services.claude import anthropic_llm
 
 def organize_messages(collection_name, messages: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """

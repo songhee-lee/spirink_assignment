@@ -1,8 +1,8 @@
 import openai
 from typing import List, Dict, Any
 
-from server.common.openai.config import openai_settings
-from server.common.logging.config import setup_logging
+from common.openai.config import openai_settings
+from common.logging.config import setup_logging
 
 logger = setup_logging(__name__)
 
@@ -23,11 +23,13 @@ class LLM:
             logger.error(f"OpenAI AuthenticationError : {str(e)}")
             return False
 
-    def generate(self, messages: List[Dict[str, Any]], model_config) -> str:
+    def generate(self, messages: List[Dict[str, Any]]) -> str:
         """
         llm 답변 받기 
         messages : 전체 채팅 메세지
         """
+        messages = check_max_tokens(messages, openai_settings.OPENAI_LLM_MAX_TOKENS)
+
         response = openai.ChatCompletion.create(
             model=openai_settings.OPENAI_LLM_MODEL,
             messages=messages,

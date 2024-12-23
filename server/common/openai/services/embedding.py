@@ -1,9 +1,9 @@
 import openai
 from typing import List
 
-from server.common.openai.config import openai_settings
-from server.common.openai.utils.tokenizer import openai_tokenizer
-from server.common.logging.config import setup_logging
+from common.openai.config import openai_settings
+from common.openai.utils.tokenizer import openai_tokenizer
+from common.logging.config import setup_logging
 
 logger = setup_logging(__name__)
 

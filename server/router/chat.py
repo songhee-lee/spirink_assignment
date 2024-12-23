@@ -1,9 +1,9 @@
 from fastapi import APIRouter
 
-from server.modules.chat.dtos.request import ChatRequest
-from server.modules.chat.dtos.response import ChatResponse
-from server.modules.chat.services.chatbot import get_chat_response
-from server.common.logging.config import setup_logging
+from modules.chat.dtos.request import ChatRequest
+from modules.chat.dtos.response import ChatResponse
+from modules.chat.services.chatbot import get_chat_response
+from common.logging.config import setup_logging
 
 logger = setup_logging(__name__)
 
