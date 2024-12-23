@@ -24,7 +24,7 @@ class Product:
         return '\n'.join(f"{key}: {value}" for key, value in self.__dict__.items())
 
 
-def read_sheets(spreadsheet_id):
+def get_google_sheets_data(spreadsheet_id):
     GOOGLE_AUTH_PATH = os.getenv("GOOGLE_AUTH_PATH")
     
     # 구글 스프레드시트 API 인증
