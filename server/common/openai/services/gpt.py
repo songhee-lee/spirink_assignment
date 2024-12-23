@@ -23,14 +23,16 @@ class LLM:
             logger.error(f"OpenAI AuthenticationError : {str(e)}")
             return False
 
-    def generate(self, messages: List[Dict[str, Any]]) -> str:
+    def generate(self, messages: List[Dict[str, Any]], model_config) -> str:
         """
         llm 답변 받기 
         messages : 전체 채팅 메세지
         """
         response = openai.ChatCompletion.create(
             model=openai_settings.OPENAI_LLM_MODEL,
-            messages=messages
+            messages=messages,
+            temperature=openai_settings.OPENAI_LLM_TEMPERATURE,
+            max_tokens=openai_settings.OPENAI_LLM_MAX_TOKENS
         )
 
         try :
