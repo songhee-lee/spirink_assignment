@@ -1,5 +1,7 @@
+anthropic
 chromadb==0.5.23
 fastapi==0.115.6
+gspread
 google-api-core==2.24.0
 google-api-python-client==2.156.0
 google-auth==2.37.0
@@ -9,8 +11,8 @@ langchain==0.3.13
 langchain-core==0.3.28
 numpy==1.24.1
 openai==0.28.0
-pydantic==2.10.4
-pydantic-settings==2.7.0
+pydantic
+pydantic-settings
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 requests==2.32.3
