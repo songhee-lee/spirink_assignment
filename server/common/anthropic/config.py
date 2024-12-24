@@ -9,7 +9,7 @@ class Settings(BaseSettings):
 
     ANTHROPIC_LLM_MODEL : str = "claude-3-5-sonnet-20241022"
     ANTHROPIC_LLM_MAX_TOKENS : int = 1024
-    ANTHROPIC_LLM_TEMPERATURE : int = 0
+    ANTHROPIC_LLM_TEMPERATURE : float = 0
     
     ANTHROPIC_VERIFY_URL : str = "https://api.anthropic.com/verify_key"
     ANTHROPIC_GENERATE_URL : str = "https://api.anthropic.com/generate"
