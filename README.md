@@ -4,6 +4,8 @@
 
 ## 1. 실행
 
+- .env 파일 및 auth 파일 추가
+
 ```bash
 docker compose up --build
 ```
