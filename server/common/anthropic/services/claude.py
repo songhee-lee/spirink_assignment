@@ -36,8 +36,6 @@ class LLM:
         messages : 전체 채팅 메세지
         """
         try :
-            messages = check_max_tokens(messages, anthropic_settings.ANTHROPIC_LLM_MAX_TOKENS)
-
             response = self.client.messages.create(
                 model=anthropic_settings.ANTHROPIC_LLM_MODEL,
                 max_tokens=anthropic_settings.ANTHROPIC_LLM_MAX_TOKENS,

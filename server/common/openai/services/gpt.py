@@ -28,8 +28,6 @@ class LLM:
         llm 답변 받기 
         messages : 전체 채팅 메세지
         """
-        messages = check_max_tokens(messages, openai_settings.OPENAI_LLM_MAX_TOKENS)
-
         response = openai.ChatCompletion.create(
             model=openai_settings.OPENAI_LLM_MODEL,
             messages=messages,

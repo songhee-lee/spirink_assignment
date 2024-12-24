@@ -10,6 +10,7 @@ class Settings(BaseSettings):
 
     OPENAI_LLM_MODEL : str
     OPENAI_LLM_MAX_TOKENS : int
+    OPENAI_LLM_TEMPERATURE : float
     
     class Config:
         env_file = ".env"
